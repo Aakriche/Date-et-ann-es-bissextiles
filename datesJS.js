@@ -16,7 +16,7 @@ annee = parseInt(nbrAnnee); // Année prend 2021
 do {  
   tabAnnees.push(annee); // Le Tableau reçoit la valeur annee
   selectannee.add(new Option (tabAnnees[iTabAnnees], tabAnnees[iTabAnnees]));
-  annee--; //annee réduit de 1
+  annee--; //l'annee réduit de 1
   iTabAnnees ++; // L'indice du tableau augmente
 } while (annee > milneuf);
 
@@ -36,7 +36,7 @@ var iTabJours = 0; // Indice du tableau de jours
 
 function generateJour () {
 
-console.log("salut t'es lancée?");
+
 tabJours = 1; //tableau de jours 
 iTabJours = 0; // ID tableau de jours   
 document.getElementById('selectjour').innerText = null ; // Efface les options "jour", afin d'en remettre de nouvelles à chaque changement de mois.
