@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <meta charset="utf-8">
+    <meta name="description" content="phrase de 200 mots pour decrire la page">
+    <head>
+    <title>Test html</title>
+
+<link rel="stylesheet" type="text/css" href="intdate.css">
+    </head>
+<body>
+
+<main>
+    <form>
+        <fieldset>
+          <legend>Entrez votre date de naissance</legend>
+      
+          <label for="annee">année</label>
+          <select id="selectannee" name="annee"></select>
+          
+      
+          <label for="mois">&nbsp; &nbsp; &nbsp;mois</label>
+          <select id="selectmois" name="mois"></select>
+          
+      
+          <label for="jour">&nbsp; &nbsp; &nbsp;jour</label>
+          <select  id="selectjour" name="jour"></select>
+          
+        </fieldset>
+        <fieldset>
+            <legend>Selectionner l'unité</legend>
+        
+            <input type="radio" id="jour" name="calcul">
+            <label for="jour">jours</label><br/>
+        
+            <input type="radio" id="mois" name="calcul">
+            <label for="mois">mois</label><br/>
+        
+            <input type="radio" id="annee" name="calcul">
+            <label for="annee">années</label>
+          </fieldset>
+      </form>
+
+      <button id="bouton">Calculer</button>
+
+</main>
+
+
+
+
+
+<script type="text/javascript" src="datesJS.js"></script>
+</body>
+</html>
