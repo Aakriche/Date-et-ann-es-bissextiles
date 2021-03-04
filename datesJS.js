@@ -25,8 +25,8 @@ var tabMois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet",
 var iTabMois = 0;
 
 do {
-selectmois.add(new Option (tabMois[iTabMois], tabMois[iTabMois]));
-iTabMois++;
+    selectmois.add(new Option (tabMois[iTabMois], tabMois[iTabMois]));
+    iTabMois++;
 } 
 while (iTabMois < tabMois.length);
 
@@ -37,48 +37,48 @@ var iTabJours = 0; // Indice du tableau de jours
 function generateJour () {
 
 
-tabJours = 1; //tableau de jours 
-iTabJours = 0; // ID tableau de jours   
-document.getElementById('selectjour').innerText = null ; // Efface les options "jour", afin d'en remettre de nouvelles à chaque changement de mois.
+    tabJours = 1; //tableau de jours 
+    iTabJours = 0; // ID tableau de jours   
+    document.getElementById('selectjour').innerText = null ; // Efface les options "jour", afin d'en remettre de nouvelles à chaque changement de mois.
 
-//Fonction qui vérifie si une année est bissextile
-function isLeap(year) {
-  return new Date(selectannee.value, 1, 29).getDate() === 29;
-}
+    //Fonction qui vérifie si une année est bissextile
+    function isLeap(year) {
+        return new Date(selectannee.value, 1, 29).getDate() === 29;
+    }
 
 
-// Definit si le menu des jours affichera 31 30 29 ou 28 jours
-switch (true) {
+    // Definit si le menu des jours affichera 31 30 29 ou 28 jours
+    switch (true) {
 
-    case ["Janvier", "Mars", "Mai", "Juillet", "Aout", "Octobre", "Décembre"].includes(selectmois.value):
-        do {selectjour.add(new Option (tabJours, tabJours));
-        tabJours ++;
+        case ["Janvier", "Mars", "Mai", "Juillet", "Aout", "Octobre", "Décembre"].includes(selectmois.value):
+            do {selectjour.add(new Option (tabJours, tabJours));
+            tabJours ++;
         } 
         while (tabJours <= 31);
-    break;
+        break;
     
-    case ["Avril", "Juin", "Septembre", "Novembre"].includes(selectmois.value):
-        do {selectjour.add(new Option (tabJours, tabJours));
-        tabJours ++;
+        case ["Avril", "Juin", "Septembre", "Novembre"].includes(selectmois.value):
+            do {selectjour.add(new Option (tabJours, tabJours));
+            tabJours ++;
         } 
         while (tabJours <= 30);
-    break;
+        break;
 
-    case ["Février"].includes(selectmois.value) && isLeap(selectannee.value):
-        do {selectjour.add(new Option (tabJours, tabJours));
-        tabJours ++;
+        case ["Février"].includes(selectmois.value) && isLeap(selectannee.value):
+            do {selectjour.add(new Option (tabJours, tabJours));
+            tabJours ++;
         } 
         while (tabJours <= 29); 
-    break;
+        break;
 
-    case ["Février"].includes(selectmois.value) && (isLeap(selectannee.value) == false):
-        do {selectjour.add(new Option (tabJours, tabJours));
+        case ["Février"].includes(selectmois.value) && (isLeap(selectannee.value) == false):
+            do {selectjour.add(new Option (tabJours, tabJours));
             tabJours ++;
         } 
         while (tabJours <= 28);
-    break;
+        break;
 
-}
+    }
 
 }
 
@@ -104,10 +104,10 @@ var time;
 
 //Detecte les changements de dates et actualise la date anniversaire
 function anniversaireChange(){
-anniv = new Date (parseInt(selectannee.value), parseInt(tabMois.indexOf(selectmois.value)), parseInt(selectjour.value) ); //Date de naissance
-valeuranniv = anniv.getTime(); // Extrait la valeur de la date anniversaire en milisec
-valeuraujd = aujourdhui.getTime(); // Extrait la valeur de la date d'aujourd'hui en milisec
-time = valeuraujd - valeuranniv; // Soustrait pour obtenir la valeur vécue en milisec
+    anniv = new Date (parseInt(selectannee.value), parseInt(tabMois.indexOf(selectmois.value)), parseInt(selectjour.value) ); //Date de naissance
+    valeuranniv = anniv.getTime(); // Extrait la valeur de la date anniversaire en milisec
+    valeuraujd = aujourdhui.getTime(); // Extrait la valeur de la date d'aujourd'hui en milisec
+    time = valeuraujd - valeuranniv; // Soustrait pour obtenir la valeur vécue en milisec
 }
 
 //Relance la fonction si changement de date
@@ -130,7 +130,7 @@ function calculer() {
             alert('En jours vous avez vécu ' + Math.round(resultat) + " jours");
 
         }
-calcul1();
+        calcul1();
 
     }
 
@@ -143,7 +143,7 @@ calcul1();
 
         }
 
-calcul2();
+        calcul2();
 
     }
 
@@ -156,7 +156,7 @@ calcul2();
 
         }
 
-calcul3();
+        calcul3();
 
     }
 
